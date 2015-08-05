@@ -14,7 +14,7 @@ AlternC est optimisé pour [Debian](https://www.debian.org/). Vous pouvez pour l
 
 Non.
 
-#### Je me suis trompé pour les questions posées lors de l'installation, je peux faire quoi ?
+#### Je me suis trompé lors des questions pendant l'installation, je peux faire quoi ?
 
 La méthode la plus simple est d'utiliser la commande `dpkg-reconfigure alternc`. 
 
