@@ -4,9 +4,7 @@ N'hésitez pas à nous contacter via IRC sur le canal `#alternc` (`irc.freenode.
 
 #### Dans quelles langues AlternC est il disponible ?
 
-AlternC est pour le moment disponible en Anglais et en Français. Vous pouvez d'ailleurs nous aider à finir la traduction dans d'autres langues sur [transifex](https://www.transifex.com/octopuce/alternc/) (
-allemand (96%), néerlandais (72%) et espagnol (59%)).
-
+AlternC est pour le moment disponible en Anglais et en Français. Vous pouvez d'ailleurs nous aider à finir la traduction dans d'autres langues (comme l'allemand, le néerlandais ou encore l'espagnol) sur [transifex](https://www.transifex.com/octopuce/alternc/).
 
 #### Sur quelle distribution je peux installer AlternC ?
 
