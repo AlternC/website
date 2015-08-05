@@ -1,4 +1,6 @@
-Bienvenue dans la FAQ d'AlternC. 
+Bienvenue dans la FAQ d'AlternC.
+
+N'hésitez pas à nous contacter via IRC sur le canal `#alternc` (`irc.freenode.org`).
 
 #### Je n'arrive pas a accéder a mon bureau.
 
