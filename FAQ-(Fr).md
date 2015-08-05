@@ -2,9 +2,11 @@ Bienvenue dans la FAQ d'AlternC.
 
 N'hésitez pas à nous contacter via IRC sur le canal `#alternc` (`irc.freenode.org`).
 
-#### Je n'arrive pas a accéder a mon bureau.
+#### Dans quelles langues AlternC est il disponible ?
 
-Alternc utilise le protocole https par défaut pour l'accès au panel, il faut donc utiliser ​`https://alternc.monserveur.org` pour y accéder.
+AlternC est pour le moment disponible en Anglais et en Français. Vous pouvez d'ailleurs nous aider à finir la traduction dans d'autres langues sur [transifex](https://www.transifex.com/octopuce/alternc/) (
+allemand (96%), néerlandais (72%) et espagnol (59%)).
+
 
 #### Sur quelle distribution je peux installer AlternC ?
 
@@ -19,6 +21,11 @@ Non.
 La méthode la plus simple est d'utiliser la commande `dpkg-reconfigure alternc`. 
 
 Il est aussi possible de modifier le fichier de configuration `/etc/alternc/alternc.conf` puis de (re)lancer `alternc.install`.
+
+#### Je n'arrive pas a accéder a mon bureau.
+
+Alternc utilise le protocole https par défaut pour l'accès au panel, il faut donc utiliser ​`https://alternc.monserveur.org` pour y accéder.
+
 
 #### Comment mettre à jour vers la dernière version ?
 
