@@ -26,7 +26,7 @@ Il faut ensuite indiquer au système la partition qui va contenir les données u
 /dev/md1    /    ext3    auto,noatime,acl    0    0
 ```
 
-> À noter que c'est `acl` pour ext3, et `attr2` pour xfs.
+> ATTENTION : c'est `acl` si votre système de fichier est en `ext3`, mais c'est `attr2` pour du `xfs`.
 
 
 Quota
