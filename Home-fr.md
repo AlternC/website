@@ -13,7 +13,7 @@ Vous pouvez nous joindre sur IRC dans le canal `#AlternC` sur `irc.freenode.org`
 
 Le code source (sous licence GPL-v3+) est [disponible sur GitHub](https://github.com/AlternC/AlternC)
 
-La traduction du logiciel [a lieu sur Transifex]https://www.transifex.com/octopuce/alternc/), les contributions sont bienvenues !
+La traduction du logiciel [a lieu sur Transifex](https://www.transifex.com/octopuce/alternc/), les contributions sont bienvenues !
 
 ## Dernières versions
 
