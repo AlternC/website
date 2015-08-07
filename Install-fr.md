@@ -118,7 +118,7 @@ Vous pouvez y ajouter
 DNS - serveurs de nom
 ---------------------
 
-Les serveurs de noms servent à distribuer l'information sur les noms de domaine installés sur votre serveur. Si vous avez besoin de serveurs de noms, Alternc vous propose un service gratuit sur alternc.net en dans ce cas vous pouvez saisir :
+Les serveurs de noms servent à distribuer l'information sur les noms de domaine installés sur votre serveur. Si vous avez besoin de serveurs de noms, Alternc vous propose un service gratuit sur alternc.net. Dans ce cas vous pouvez saisir :
 
 * DNS primaire : `ns1.alternc.net`
 * DNS secondaire : `ns2.alternc.net`
@@ -131,8 +131,6 @@ Attention, si vous avez un nom de domaine que vous comptez utiliser pour votre c
 Utilisez un autre nom de domaine pointant sur votre machine voire directement son adresse IP.
 
 En résumé, si votre serveur est sur l'IP 12.34.56.78 et que vous avez le nom de domaine exemple.com pour votre site perso, n'utilisez pas exemple.com mais soit l'adresse IP, soit alternc.exemple.com, soit le domaine fourni par votre hébergeur ex: serveur234215.groshebergeur.net
-
-Pour information, Alternc prépare un service sur alternc.net qui vous permettra d'annoncer votre serveur sur un domaine en .alternc.net
 
 * phpMyAdmin
 
