@@ -1,7 +1,7 @@
 
 AlternC est une suite logicielle permettant de gérer facilement un serveur web et mail.
 
-Pour installer AlternC sur votre distribution Debian GNU/Linux stable, [lisez notre documentation](Install-fr).
+Pour installer AlternC sur votre distribution Debian GNU/Linux, [lisez notre documentation](Install-fr).
 
 Si vous avez de questions, [la FAQ est là pour y répondre](FAQ-fr)
 
