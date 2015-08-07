@@ -16,7 +16,7 @@ Non.
 
 #### Je me suis trompé lors des questions pendant l'installation, je peux faire quoi ?
 
-La méthode la plus simple est d'utiliser la commande `dpkg-reconfigure alternc`. 
+La méthode la plus simple est d'utiliser la commande `dpkg-reconfigure -plow alternc`. 
 
 Il est aussi possible de modifier le fichier de configuration `/etc/alternc/alternc.conf` puis de (re)lancer `alternc.install`.
 
@@ -44,16 +44,17 @@ Il faut ensuite mettre les dépôts à jour (`apt-get update`) et lancer la mise
 
 C'est probablement les quotas du compte qui sont a zéro. Les quotas peuvent être gérés par l'administrateur, dans le menu "Gérer les membres". Nous vous conseillons de régler des quotas par défaut dans le "panneau administrateur".
 
-####Je viens d'installer un plugin mais aucun menu n'apparaît dans mon compte !
+#### Je viens d'installer un plugin mais aucun menu n'apparaît dans mon compte !
 
 C'est probablement un problème de quota qui est à zéro. (Voir la réponse précédente)
 
 #### Quelle est la correspondance entre les ID des comptes AlternC et les usagers UNIX?
 
-Chaque compte alternc est un "group" unix. Ce groupe n'est pas (pour l'instant ?) dans `/etc/group`, les fichiers apparaissent alors comme ayant des ID "numériques" (comme 2001:2001).
+Chaque compte alternc est un utilisateur et un groupe unix. Ce groupe n'est pas défini pour l'instant dans `/etc/group` ou `/etc/passwd`, les fichiers apparaissent alors comme ayant des ID numériques (comme 2001:2001).
 
 #### Comment migrer un domaine existant sur un autre compte
 
-#### Les quotas ne fonctionnent pas, que faire?
+#### Les quotas ne fonctionnent pas, que faire ?
 
 #### J'ai perdu mon mot de passe administrateur !
+
