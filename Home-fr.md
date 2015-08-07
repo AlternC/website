@@ -1,19 +1,25 @@
 
 AlternC est une suite logicielle permettant de gérer facilement un serveur web et mail.
 
+Si vous le souhaitez, vous pouvez tester AlternC directement [sur notre serveur de démonstration](http://demo.alternc.org/)
+
 #### Installation
 
 Pour installer AlternC sur votre distribution Debian GNU/Linux, [lisez notre documentation](Install-fr).
 
-Si vous avez des questions, [la FAQ est là pour y répondre](FAQ-fr)
+#### Nous contacter
 
-Vous pouvez tester AlternC [sur notre serveur de démonstration](http://demo.alternc.org/)
+Vous pouvez nous joindre sur IRC via le canal `#AlternC` sur `irc.freenode.org`
 
-Si vous souhaitez participer à son développement, [nous avons un site dédié aux développeurs](http://alternc.org).
+Si vous avez des questions, vous pouvez sans doute y trouver des réponses dans [notre FAQ](FAQ-fr)
 
-Vous pouvez nous joindre sur IRC dans le canal `#AlternC` sur `irc.freenode.org`
+#### Développements
 
-Le code source (sous licence GPL-v3+) est [disponible sur GitHub](https://github.com/AlternC/AlternC)
+Si vous souhaitez participer au développement d'AlternC, le code source est [disponible sur GitHub](https://github.com/AlternC/AlternC) sous licence GPLv3. 
+
+N'hésitez pas [ouvrir des tickets](https://github.com/AlternC/AlternC/issues) si vous rencontrez un bug.
+
+#### Traductions 
 
 La traduction du logiciel [a lieu sur Transifex](https://www.transifex.com/octopuce/alternc/), les contributions sont bienvenues !
 
