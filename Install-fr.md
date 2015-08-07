@@ -76,13 +76,9 @@ Pour installer AlternC sur un serveur vous devez utiliser un éditeur de texte p
 
 ```
 deb http://debian.alternc.org/ wheezy main
-deb-src http://debian.alternc.org/ wheezy main
 ```
 
-dans un des deux fichiers suivants :
-
-* soit dans le fichier existant `/etc/apt/sources.list`
-* soit dans un nouveau fichier `/etc/apt/sources.list.d/alternc.list`
+dans le fichier `/etc/apt/sources.list.d/alternc.list`.
 
 
 Les paquets debian sont signés numériquement, avant d'exécuter un apt-get update, il convient d'ajouter la clef du repository alternc avec la commande:
