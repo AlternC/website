@@ -1,4 +1,4 @@
-To use this repository, create a file named /etc/apt/sources.list.d/alternc-nightly.list as follow :
+To use this repository, create a file named `/etc/apt/sources.list.d/alternc-nightly.list` as follow:
 
 ## Debian 8 (Jessie)
 
