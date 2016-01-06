@@ -22,4 +22,3 @@ The repository and the packages are signed by the pgp key of AlternC nightly bui
 * Jessie: `wget http://stable-3-3.nightly.alternc.org/nightly.key -O - | apt-key add -`
 * Wheezy: `wget http://stable-3-2.nightly.alternc.org/nightly.key -O - | apt-key add -`
 * Squeeze: `wget http://stable-3-1.nightly.alternc.org/nightly.key -O - | apt-key add -`
-```
