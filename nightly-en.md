@@ -33,8 +33,7 @@ The repository and the packages are signed by the pgp key of AlternC nightly bui
 ```
 wget http://stable-3-1.nightly.alternc.org/nightly.key -O - | apt-key add -
 ```
-
-h2. default login/password
+## Default login/password
 
 * login: `admin`
 * password: `admin`
