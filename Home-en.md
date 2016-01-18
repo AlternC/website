@@ -13,6 +13,6 @@ You can join us on IRC channel `#AlternC` on `irc.freenode.org`
 
 The latest versions of AlternC are:
 
+* [3.1.10 (for Squeeze) / 3.2.10 (for Wheezy) / 3.3.10 (for Jessie) released on January 18th 2016](https://github.com/AlternC/AlternC/releases/tag/3.1.10)
 * [3.1.9 (for Squeeze) / 3.2.9 (for Wheezy) released on November 17th 2015](https://github.com/AlternC/AlternC/releases/tag/3.1.9)
 * [3.1.8 (for Squeeze) / 3.2.8 (for Wheezy) released on August 3rd 2015](https://github.com/AlternC/AlternC/releases/tag/3.1.8)
-* [3.1.6 (for Squeeze) / 3.2.6 (for Wheezy) released on May 12th 2015](https://github.com/AlternC/AlternC/releases/tag/3.1.6)
