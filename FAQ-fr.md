@@ -8,9 +8,9 @@ AlternC est pour le moment disponible en Anglais et en Français. Vous pouvez d'
 
 #### Sur quelle distribution je peux installer AlternC ?
 
-AlternC est optimisé pour [Debian](https://www.debian.org/). Vous pouvez pour le moment l'installer sur la version 6  (squeeze) et 7 (wheezy).
+AlternC est optimisé pour [Debian](https://www.debian.org/). Vous pouvez pour le moment l'installer sur la version 6 (Squeeze) et 7 (Wheezy). Une version pour Debian 8 (Jessie) existe mais n'a pas été testée extensivement à ce jour.
 
-#### Peut-on installer Alternc sous windows?
+#### Peut-on installer AlternC sous windows?
 
 Non.
 

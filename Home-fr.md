@@ -1,5 +1,5 @@
 
-AlternC est une suite logicielle permettant de gérer facilement un serveur web et mail.
+AlternC est une suite logicielle permettant de gérer facilement un serveur web et email.
 
 Si vous le souhaitez, vous pouvez tester AlternC directement [sur notre serveur de démonstration](http://demo.alternc.org/)
 
