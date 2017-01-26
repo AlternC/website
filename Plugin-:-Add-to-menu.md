@@ -13,7 +13,7 @@ Display a block with a title linked
             'ico' => 'images/example.png',
             'link' => 'toggle',
             'pos' => 100,
-            'links' => 'http://www.alternc.net',
+            'link' => 'http://www.alternc.net',
         );
         return $obj;
         }
