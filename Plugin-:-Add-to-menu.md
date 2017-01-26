@@ -1,12 +1,20 @@
 To add a block on menu, you can use 'hook_menu'
 Our plugin is named **example**, then we must have a class 
 
-In /var/class/m_exemple.php
+In /usr/share/alternc/panel/class/m_example.php
 
-    class m_sample  {
+Display a block with a title linked
+
+    class m_example  {
 
         function hook_menu() {
-            $obj = array(
-            );
+        $obj = array(
+            'title' => _("Example"),
+            'ico' => 'images/example.png',
+            'link' => 'toggle',
+            'pos' => 100,
+            'links' => 'http://www.alternc.net',
+        );
+        return $obj;
         }
     }
