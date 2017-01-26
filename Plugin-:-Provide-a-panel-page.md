@@ -11,4 +11,8 @@ Base template is as this :
     include_once("head.php");
     ?>
 
+    <h3><?php __("Example action title"); ?></h3>
+    <hr id="topbar"/>
+    <br />
+
     <?php include_once("foot.php"); ?>
