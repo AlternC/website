@@ -11,9 +11,8 @@ Display a block with a title linked
         $obj = array(
             'title' => _("Example"),
             'ico' => 'images/example.png',
-            'link' => 'toggle',
-            'pos' => 100,
             'link' => 'http://www.alternc.net',
+            'pos' => 100,
         );
         return $obj;
         }
