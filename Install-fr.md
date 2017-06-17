@@ -164,6 +164,9 @@ Une fois que l'installation est achevée, le script `alternc.install` **doit êt
 alternc.install
 ```
 
+Si vous souhaitez installer un certificat SSL pour votre panel (qui sera aussi utilisé par Dovecot, Proftpd, Postfix etc.) nous vous recommandons d'installer LetsEncrypt et de configurer un certificat [grâce à notre documentation en ligne sur SSL](SSL-fr).
+
+
 Post Installation
 =================
 
