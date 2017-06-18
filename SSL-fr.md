@@ -1,6 +1,6 @@
 
-Installation de SSL pour AlternC
-================================
+Installation de SSL/TLS pour AlternC
+====================================
 
 AlternC gère pour l'instant un seul certificat SSL pour tout le serveur, qui sera utilisé pour le HTTPS via Apache2 du Panel, avec POP/IMAP dans Dovecot, avec SMTP dans Postfix, et avec FTP dans ProFtpd.
 
@@ -14,6 +14,7 @@ Installation de Letsencrypt
 Pour installer Letsencrypt, vous devez disposer d'une Debian Jessie ou ultérieure.
 
 Sous Jessie, ajoutez le dépôt Debian de backport dans /etc/apt/sources.list.d comme suit : 
+
 ```
 echo "deb http://ftp.fr.debian.org/debian jessie-backports main" >/etc/apt/sources.list.d/backports.list
 ```
@@ -22,6 +23,7 @@ puis installez Letsencrypt :
 
 ```
 apt update
+
 apt install -t jessie-backports letsencrypt 
 ```
 
@@ -29,6 +31,7 @@ sur les Debian Stretch ou ultérieur, installez juste Letsencrypt comme suit :
 
 ```
 apt update 
+
 apt install letsencrypt
 ```
 
@@ -46,7 +49,9 @@ puis on s'assure que tout est bon :
 
 ```
 a2enmod alias
+
 mkdir -p /var/www/letsencrypt/.well-known/acme-challenge
+
 service apache2 reload
 ```
 
@@ -74,6 +79,7 @@ Aussi, pour utiliser le certificat généré plus haut via Letsencrypt, nous cr�
 
 ```
 ln -s /etc/letsencrypt/live/alternc.monserveur.com/fullchain.pem /etc/alternc/fullchain.pem
+
 ln -s /etc/letsencrypt/live/alternc.monserveur.com/privkey.pem /etc/alternc/privkey.pem
 ```
 
@@ -81,9 +87,9 @@ L'avantage de faire un lien symbolique est qu'en cas de renouvellement, les serv
 
 Si vous utilisez un autre système pour vos certificats, changez la cible du lien de manière adéquate.
 
-Une fois ces fichiers présents, relancez `alternc.install`, qui va détecter ces nouveaux fichiers et lancer la configuration du SSL pour les logiciels, qui seront ensuite redémarrés.
+Une fois ces fichiers présents, relancez `alternc.install`, qui va détecter ces nouveaux fichiers et lancer la configuration du SSL/TLS pour les logiciels, qui seront ensuite redémarrés.
 
-Pour vérifier que votre panel a bien HTTPS de configuré, vous pouvez vous rendre sur https://ssllabs.com et entrer votre nom de serveur, une note de A devrait être obtenue automatiquement.
+Pour vérifier que votre panel a bien HTTPS de configuré, vous pouvez vous rendre sur [SSLLabs](https://ssllabs.com) et entrer votre nom DNS de serveur, une note de *A* devrait être obtenue automatiquement.
 
 
 
