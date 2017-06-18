@@ -22,17 +22,17 @@ echo "deb http://ftp.fr.debian.org/debian jessie-backports main" >/etc/apt/sourc
 puis installez Letsencrypt : 
 
 ```
-apt update
+apt-get update
 
-apt install -t jessie-backports letsencrypt 
+apt-get install -t jessie-backports letsencrypt 
 ```
 
 sur les Debian Stretch ou ultérieur, installez juste Letsencrypt comme suit : 
 
 ```
-apt update 
+apt-get update 
 
-apt install letsencrypt
+apt-get install letsencrypt
 ```
 
 une fois Letsencrypt installé, vous devez configurer Apache pour détourner l'alias `/.well-known/acme-challenge` vers un dossier particulier. 

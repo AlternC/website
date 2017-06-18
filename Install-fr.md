@@ -76,7 +76,7 @@ Il est nécessaire d'installer MySQL pour pouvoir utiliser AlternC. Si vous voul
 apt-get install mysql-server
 ```
 
-> **IMPORTANT** : Entrez un mot de passe administrateur et NOTEZ-LE car il vous sera demandé en cours d'installation.
+> **IMPORTANT** : Entrez un mot de passe administrateur et SOUVENEZ-VOUS EN car il vous sera demandé en cours d'installation.
 
 Idéalement, stockez ce mot de passe dans un fichier /root/.my.cnf, contenant les lignes suivantes, ce qui vous permettra de vous connecter en tant qu'administrateur sur votre MySQL via une simple commande `mysql`: 
 
@@ -93,7 +93,7 @@ Configuration des dépôts
 Pour installer AlternC sur un serveur vous devez utiliser un éditeur de texte pour ajouter la source des paquets d'AlternC :
 
 ```
-deb http://debian.alternc.org/ wheezy main
+deb http://debian.alternc.org/ jessie main
 ```
 
 dans le fichier `/etc/apt/sources.list.d/alternc.list`.
@@ -101,10 +101,10 @@ dans le fichier `/etc/apt/sources.list.d/alternc.list`.
 Les paquets Debian sont signés numériquement, avant d'exécuter un apt-get update, il convient d'ajouter la clef du dépôt d'AlternC avec la commande :
 
 ```
-wget http://debian.alternc.org/key.txt -O - | apt-key add -
+wget https://debian.alternc.org/key.txt -O - | apt-key add -
 ```
 
-Il s'agit d'une clé PGP possédée et maintenue par les développeurs ayant le droit d'écrire dans le dépot sur [debian.alternc.org](http://debian.alternc.org).
+Il s'agit d'une clé PGP possédée et maintenue par les développeurs ayant le droit d'écrire dans le dépot sur [debian.alternc.org](https://debian.alternc.org).
 
 
 Installation
@@ -137,6 +137,8 @@ Les serveurs de noms servent à distribuer l'information sur les noms de domaine
 
 * DNS primaire : `ns1.alternc.net`
 * DNS secondaire : `ns2.alternc.net`
+
+Si vous avez vos propres serveurs DNS, entrez-les ici. (Souvent, le serveur primaire est le nom DNS de votre serveur AlternC)
 
 Nom de domaine du serveur
 -------------------------
