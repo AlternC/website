@@ -86,14 +86,16 @@ password=<your MySQL administrator password>
 ```
 
 
-Setup the repositoried
+Setup the repositories
 ----------------------
 
-To install AlternC on a serfver, you need a text editor to add our repository to your repository list: 
+To install AlternC on a server, you need a text editor to add our repository to your repository list: 
 
 ```
 deb http://debian.alternc.org/ jessie main
 ```
+
+Of course, replace "jessie" by the version of Debian you are using (Squeeze, Wheezy, Jessie, Stretch available as of today)
 
 put it in the `/etc/apt/sources.list.d/alternc.list` file.
 

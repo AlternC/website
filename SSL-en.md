@@ -2,6 +2,8 @@
 Installation of SSL/TLS for AlternC
 ===================================
 
+*Warning, this documentation only applies to version 3.x.11 or later of Alternc. If you are using version 3.x.10 or before, you should use `/etc/alternc/apache.pem`, which is a file with private key, certificate and chained certificated altogether. The rest of the documentation is unchanged.*
+
 AlternC currently only manages one SSL certificate for the entire server, that will be used for HTTPS via Apache2 for the Panel, with POP/IMAP in Dovecot, with SMTP in Postfix, and with FTP in ProFtpd.
 
 For this to work, you'll need a valid X.509 certificate, a private key, and if needed (most of the time) a chained certificate for your CA.

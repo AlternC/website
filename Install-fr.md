@@ -96,6 +96,8 @@ Pour installer AlternC sur un serveur vous devez utiliser un éditeur de texte p
 deb http://debian.alternc.org/ jessie main
 ```
 
+Bien entendu, remplacez "jessie" par la version de Debian que vous utilisez (Squeeze, Wheezy, Jessie, Stretch disponibles à ce jour)
+
 dans le fichier `/etc/apt/sources.list.d/alternc.list`.
 
 Les paquets Debian sont signés numériquement, avant d'exécuter un apt-get update, il convient d'ajouter la clef du dépôt d'AlternC avec la commande :

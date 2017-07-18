@@ -2,6 +2,8 @@
 Installation de SSL/TLS pour AlternC
 ====================================
 
+*Attention, cette documentation ne s'applique que pour les version 3.x.11 ou ultérieur d'AlternC. Si vous avez une version 3.x.10 ou antérieure, vous devez utiliser `/etc/alternc/apache.pem`, fichier comprenant à la fois la clé privée, le certificat et le certificat chaîné. Le reste de la documentation est similaire.*
+
 AlternC gère pour l'instant un seul certificat SSL pour tout le serveur, qui sera utilisé pour le HTTPS via Apache2 du Panel, avec POP/IMAP dans Dovecot, avec SMTP dans Postfix, et avec FTP dans ProFtpd.
 
 Pour cela, vous devez disposer d'un certificat X.509 valide, d'une clé privée, et si besoin (c'est le cas le plus souvent) d'un certificat chaîné vers votre autorité de certification (CA).
