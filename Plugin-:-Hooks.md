@@ -17,7 +17,7 @@ Update domain script provide also some hook  :
 
 dns_reconfig
 * When a domain is deleted and after rndc reconfig
-* when a domain is updated and after rndc reconfig
+* when a domain is added and after rndc reconfig
 
 dns_reload_zone
 * When a domain is updated, before update bind
