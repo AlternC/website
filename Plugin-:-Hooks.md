@@ -14,10 +14,19 @@ Files must be set in **/usr/lib/alternc/install.d**. Plugin can catch these even
 # Update domain
 
 Update domain script provide also some hook  : 
-* dns_reconfig
-* dns_reload_zone
-* web_reload
-* dns_reload
+
+dns_reconfig
+* When a domain is deleted and after rndc reconfig
+* when a domain is updated and after rndc reconfig
+
+dns_reload_zone
+* When a domain is updated, before update bind
+
+web_reload
+* 
+
+dns_reload
+* 
 
 # hook on alternc class
 
