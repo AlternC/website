@@ -13,18 +13,11 @@ Files must be set in **/usr/lib/alternc/install.d**. Plugin can catch these even
 
 # Update domain
 
-After an apache reload
-* run-parts --arg=web_reload /usr/lib/alternc/reload.d
-
-after a bind reload
-* run-parts --arg=dns_reconfig  /usr/lib/alternc/reload.d
-
-before a bind reload
-* run-parts --arg=dns_reload_zone --arg="$domain" /usr/lib/alternc/reload.d
-
-
-
-
+Update domain script provide also some hook  : 
+* dns_reconfig
+* dns_reload_zone
+* web_reload
+* dns_reload
 
 # hook on alternc class
 
