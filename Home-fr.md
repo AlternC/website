@@ -15,7 +15,7 @@ Si vous avez des questions, vous pouvez sans doute y trouver des réponses dans 
 
 #### Développements
 
-Si vous souhaitez participer au développement d'AlternC, le code source est [disponible sur GitHub](https://github.com/AlternC/AlternC) sous licence GPLv3. 
+Si vous souhaitez participer au développement d'AlternC, le code source est [disponible sur GitHub](https://github.com/AlternC/AlternC) sous licence GPLv2+. 
 
 N'hésitez pas [ouvrir des tickets](https://github.com/AlternC/AlternC/issues) si vous rencontrez un bug.
 
