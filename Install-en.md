@@ -2,7 +2,7 @@
 Pre-installation
 ================
 
-AlternC works well with Linux Debian distribution, either Squeeze, Wheezy (or Jessie as a pre-release).
+AlternC works well with Linux Debian distribution, either Wheezy, Jessie (or Stretch as a pre-release).
 
 To install AlternC, you'll need:
 
