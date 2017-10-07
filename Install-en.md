@@ -23,20 +23,13 @@ Manual Install
 ACL
 ---
 
-AlternC depends on ACLs to manage user rights for the web folders. You should first install the `acl` package with:
+AlternC depends on ACLs to manage user rights for the web folders. You need to ensure your filesystems didn't disable ACL in the partition that will contain your user data. If necessary, look at `/etc/fstab` and remove any noacl (for ext3/4) or noattr2 (for xfs). As an example, this is bad:
 
 ```
-apt-get install acl
+/dev/md1    /    ext4    auto,relatime,noacl    0    0
 ```
 
-Then you need to enable the ACL in the partition that will contain your user data. Change the `/etc/fstab` file by adding the "acl" option to the partition. eg: 
-
-```
-/dev/md1    /    ext3    auto,noatime,acl    0    0
-```
-
-> WARNING: it's `acl` if your filesystem is `ext4` (or ext3), but it's `attr2` for `xfs`.
-
+On most recent (post-2012) systems, ACL is enabled by default.
 
 Quota
 -----
@@ -50,8 +43,10 @@ apt-get install quota
 Then, change `/etc/fstab` again to enable them:
 
 ```
-/dev/md1 /               ext3    acl,grpquota,errors=remount-ro 0       1
+/dev/md1   /    ext4    acl,grpquota,errors=remount-ro    0   0
 ```
+
+Note that some virtualization or containerization systems don't allow you to change fstab, or need to change it from the host system. Ask your hosting provider in that case.
 
 Remounting the partition
 ------------------------
@@ -167,7 +162,7 @@ Once the installation of the package is done, the script `alternc.install` **mus
 alternc.install
 ```
 
-If you want to install an SSL/TLS certificate for your panel (that will also be used by Dovecot, Proftpd, Postfix etc.) we recommend you to use LetsEncrypt and to configure your certificate [thanks to our online help on SSL/TLS](SSL-en).
+If you want to install an SSL/TLS certificate for your panel (that will also be used by Dovecot, Proftpd, Postfix etc.) we recommend you to use LetsEncrypt and to configure your certificate.
 
 
 Installation End
