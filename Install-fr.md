@@ -2,7 +2,7 @@
 Pré-installation
 ================
 
-AlternC est prévu pour fonctionner sur la distribution Linux Debian Squeeze, Wheezy (ou Jessie en pré-release).
+AlternC est prévu pour fonctionner sur la distribution Linux Debian Squeeze, Wheezy,  Jessie en pré-release).
 
 Pour installer Alternc vous devez : 
 
@@ -23,20 +23,13 @@ Installation manuelle
 ACL
 ---
 
-AlternC dépend des acls noyau afin de gérer les droits utilisateurs notamment en ce qui concerne les dossiers web. Il est donc nécessaire d'installer le paquet `acl` avec :
+AlternC dépend des acls noyau afin de gérer les droits utilisateurs notamment en ce qui concerne les dossiers web. Vous devez éventuellement vérifier que votre système n'a pas désactivé les ACLs. Pour ce faire, on peut vérifier dans le fichier `/etc/fstab` que noacl (pour ext3/4) ou noattr2 (pour xfs) n'est pas présent. Voici un exemple de mauvaise configuration : 
 
 ```
-apt-get install acl
+/dev/md1    /    ext3    auto,relatime,noacl    0    0
 ```
 
-Il faut ensuite indiquer au système la partition qui va contenir les données utilisateurs en y activant les ACLs. Pour ce faire, on peut modifier le fichier `/etc/fstab` en rajoutant l'option "acl" à la partition concerné, par exemple :
-
-```
-/dev/md1    /    ext3    auto,noatime,acl    0    0
-```
-
-> ATTENTION : c'est `acl` si votre système de fichier est en `ext4`, mais c'est `attr2` pour du `xfs`.
-
+Sur les systèmes récents (après 2012) les ACL sont activées par défaut.
 
 Quota
 -----
@@ -52,6 +45,8 @@ Et encore une fois modifier le `/etc/fstab` pour indiquer leur activation :
 ```
 /dev/md1 /               ext3    acl,grpquota,errors=remount-ro 0       1
 ```
+
+Notez que certains systèmes de virtualisation ou de containerisation n'autorisent pas la modification ou l'utilisation du fichier fstab, ou requièrent de le changer sur le système hôte. Demandez à votre hébergeur dans ce cas.
 
 Remontage de la partition
 -------------------------
