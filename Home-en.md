@@ -3,21 +3,21 @@ AlternC is a hosting control panel, a software suite which makes web and mail se
 
 You may want to [test it on our demonstration server](http://demo.alternc.org/)
 
-#### Install
+### Install
 
 To [install AlternC on your Debian GNU/Linux stable distribution, see our documentation](Install-en).
 
-#### Contact us
+### Contact us
 
 You can join us on IRC channel `#AlternC` on `irc.freenode.org`
 
-#### Developments
+### Developments
 
 If you want to participate, [our source code is available on GitHub](https://github.com/AlternC/AlternC/), under GPLv2+ License.
 
 Don't hesitate to participate, maybe by [filling but reports](https://github.com/AlternC/AlternC/issues) if you find some?
 
-#### Translations
+### Translations
 
 The translations of AlternC are [done on Transifex](https://www.transifex.com/octopuce/alternc/), all contributions are welcome!
 
