@@ -13,7 +13,7 @@ You can join us on IRC channel `#AlternC` on `irc.freenode.org`
 
 #### Developments
 
-If you want to participate, [our source code is available on GitHub](https://github.com/AlternC/AlternC/), under GPLv3 License.
+If you want to participate, [our source code is available on GitHub](https://github.com/AlternC/AlternC/), under GPLv2+ License.
 
 Don't hesitate to participate, maybe by [filling but reports](https://github.com/AlternC/AlternC/issues) if you find some?
 
