@@ -27,6 +27,7 @@ La traduction du logiciel [a lieu sur Transifex](https://www.transifex.com/octop
 
 Les dernières version d'AlternC sont : 
 
+* [3.1.11 (pour Squeeze) / 3.2.11 (pour Wheezy) / 3.3.11 (pour Jessie) and 3.4.11 (pour Stretch) sortie le 7 novembre 2017](https://github.com/AlternC/AlternC/releases/tag/3.1.11)
 * [3.1.10 (pour Squeeze) / 3.2.10 (pour Wheezy) / 3.3.10 (pour Jessie) sortie le 18 janvier 2016](https://github.com/AlternC/AlternC/releases/tag/3.1.10)
 * [3.1.9 (pour Squeeze) / 3.2.9 (pour Wheezy) sortie le 17 novembre 2015](https://github.com/AlternC/AlternC/releases/tag/3.1.9)
 * [3.1.8 (pour Squeeze) / 3.2.8 (pour Wheezy) sortie le 3 août 2015](https://github.com/AlternC/AlternC/releases/tag/3.1.8)

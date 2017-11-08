@@ -23,8 +23,9 @@ The translations of AlternC are [done on Transifex](https://www.transifex.com/oc
 
 ## Latest versions
 
-The latest versions of AlternC are:
+The latest versions of AlternC are as follow:
 
+* [3.1.11 (for Squeeze) / 3.2.11 (for Wheezy) / 3.3.11 (for Jessie) and 3.4.11 (for Stretch) released on November 7th 2017](https://github.com/AlternC/AlternC/releases/tag/3.1.11)
 * [3.1.10 (for Squeeze) / 3.2.10 (for Wheezy) / 3.3.10 (for Jessie) released on January 18th 2016](https://github.com/AlternC/AlternC/releases/tag/3.1.10)
 * [3.1.9 (for Squeeze) / 3.2.9 (for Wheezy) released on November 17th 2015](https://github.com/AlternC/AlternC/releases/tag/3.1.9)
 * [3.1.8 (for Squeeze) / 3.2.8 (for Wheezy) released on August 3rd 2015](https://github.com/AlternC/AlternC/releases/tag/3.1.8)
