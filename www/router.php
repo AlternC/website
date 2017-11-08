@@ -1,5 +1,7 @@
 <?php
 
+$path="/var/www/www"; // root of WIKI clone
+
 // List here the supported languages :
 $otherlang=array( 
 		 "fr" => "Français",
@@ -54,8 +56,8 @@ unset($otherlang[$lang]);
 
 header("Content-Type: text/html; charset=UTF-8");
 
-if (!file_exists("../".$uri."-".$lang.".md")) {
-    if (file_exists("../".ucfirst($uri)."-".$lang.".md")) {
+if (!file_exists($path."/".$uri."-".$lang.".md")) {
+    if (file_exists($path."/".ucfirst($uri)."-".$lang.".md")) {
         header("Location: /".ucfirst($uri)."-".$lang);
         exit();
     }
@@ -65,12 +67,14 @@ if (!file_exists("../".$uri."-".$lang.".md")) {
 }
 
 // automatic compilation / caching of HTML pages
-if (!file_exists("../".$uri."-".$lang.".html") ||
-    filemtime("../".$uri."-".$lang.".html") < filemtime("../pages/".$uri."-".$lang.".md") ) {
-  passthru("github-markup ".escapeshellarg("../".$uri."-".$lang.".md")." >".escapeshellarg("../".$uri."-".$lang.".html")." 2>&1");
+if (!file_exists($path."/".$uri."-".$lang.".html") ||
+    filemtime($path."/".$uri."-".$lang.".html") < filemtime($path."/".$uri."-".$lang.".md") ) {
+    $exec="github-markup ".escapeshellarg($path."/".$uri."-".$lang.".md")." >".escapeshellarg($path."/".$uri."-".$lang.".html")." ";
+//    echo $exec;
+  passthru($exec);
 }
 
-$f=fopen("../".$uri."-".$lang.".html","rb");
+$f=fopen($path."/".$uri."-".$lang.".html","rb");
 
 $headings=array();
 $cur=array(); $id=""; $name="";
@@ -108,7 +112,7 @@ foreach($headings as $v) {
 // SPIT OUT THE PAGE:
 require_once("head.php");
 
-readfile("../".$uri."-".$lang.".html");
+readfile($path."/".$uri."-".$lang.".html");
 
 require_once("foot.php");
 
