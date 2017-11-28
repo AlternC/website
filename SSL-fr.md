@@ -2,96 +2,50 @@
 Installation de SSL/TLS pour AlternC
 ====================================
 
-*Attention, cette documentation ne s'applique que pour les version 3.x.11 ou ultérieur d'AlternC. Si vous avez une version 3.x.10 ou antérieure, vous devez utiliser `/etc/alternc/apache.pem`, fichier comprenant à la fois la clé privée, le certificat et le certificat chaîné. Le reste de la documentation est similaire.*
+Depuis Alternc 3.2.11 (Wheezy), 3.3.11 (Jessie), 3.4.11 (Stretch), un module dédié est proposé [alternc-certbot](https://github.com/alternc/alternc-certbot)
 
-AlternC gère pour l'instant un seul certificat SSL pour tout le serveur, qui sera utilisé pour le HTTPS via Apache2 du Panel, avec POP/IMAP dans Dovecot, avec SMTP dans Postfix, et avec FTP dans ProFtpd.
+Il prend en charge [Letsencrypt](https://letsencrypt.org) autorité gratuite initiée par [l'EFF](https://www.eff.org) pour l'ensemble des domaines hébergés ainsi que pour le panel.
 
-Pour cela, vous devez disposer d'un certificat X.509 valide, d'une clé privée, et si besoin (c'est le cas le plus souvent) d'un certificat chaîné vers votre autorité de certification (CA).
+# Installation
 
-Nous vous recommandons d'utiliser [Letsencrypt](https://letsencrypt.org), autorité gratuite initiée par [l'EFF](https://www.eff.org). Nous vous montrons comment procéder dans la première partie de cette documentation : 
+## Wheezy
 
-Installation de Letsencrypt
----------------------------
-
-Pour installer Letsencrypt, vous devez disposer d'une Debian Jessie ou ultérieure.
-
-Sous Jessie, ajoutez le dépôt Debian de backport dans /etc/apt/sources.list.d comme suit : 
-
-```
-echo "deb http://ftp.fr.debian.org/debian jessie-backports main" >/etc/apt/sources.list.d/backports.list
-```
-
-puis installez Letsencrypt : 
-
-```
+```shell
+apt-get install apt-transport-https
+echo "deb [trusted=yes] https://dl.bintray.com/alternc/stable stable main"  >> /etc/apt/sources.list.d/alternc.list
+echo 'deb http://download.opensuse.org/repositories/home:/antonbatenev:/letsencrypt/Debian_7.0/ /' > /etc/apt/sources.list.d/certbot.list
 apt-get update
+apt-get install certbot
+apt-get install alternc-certbot
+alternc.install
+```
+## Jessie
 
-apt-get install -t jessie-backports letsencrypt 
+```shell
+apt-get install apt-transport-https
+echo "deb http://ftp.debian.org/debian jessie-backports main" >> /etc/apt/sources.list
+echo "deb [trusted=yes] https://dl.bintray.com/alternc/stable stable main"  >> /etc/apt/sources.list.d/alternc.list
+apt-get update
+apt-get install -t jessie-backports certbot
+apt-get install alternc-certbot
+alternc.install
 ```
 
-sur les Debian Stretch ou ultérieur, installez juste Letsencrypt comme suit : 
+## Stretch
 
-```
-apt-get update 
-
-apt-get install letsencrypt
-```
-
-une fois Letsencrypt installé, vous devez configurer Apache pour détourner l'alias `/.well-known/acme-challenge` vers un dossier particulier. 
-Nous recommandons d'utiliser `/var/www/letsencrypt/.well-known/acme-challenge` pour cela, car c'est le dossier que AlternC-ssl utilisera à l'avenir. 
-Pour cela on configure Apache ainsi : 
-
-dans `/etc/apache2/conf-enabled/letsencrypt.conf`, mettez : 
-
-```
-Alias /.well-known/acme-challenge /var/www/letsencrypt/.well-known/acme-challenge
+```shell
+apt-get install apt-transport-https
+echo "deb [trusted=yes] https://dl.bintray.com/alternc/stable stable main"  >> /etc/apt/sources.list.d/alternc.list
+apt-get update
+apt-get install certbot alternc-certbot
+alternc.install
 ```
 
-puis on s'assure que tout est bon : 
+Nous proposons aussi des versions en cours de développement, nous vous invitons à consulter [la documentation du plugin](https://github.com/alternc/alternc-certbot)
 
-```
-a2enmod alias
 
-mkdir -p /var/www/letsencrypt/.well-known/acme-challenge
+Pour les anciennes versions d'Alternc, nous vous invitons à effectuer la mise à jour de votre panel.
 
-service apache2 reload
-```
-
-enfin, on peut demander à Letsencrypt un certificat pour notre panel et serveur : (en remplaçant "alternc.monserveur.com" par son nom DNS réel bien entendu)
-
-```
-letsencrypt --certonly --webroot -w /var/www/letsencrypt -d alternc.monserveur.com
-```
-
-Letsencrypt vous demandera une adresse email (pour vous prévenir si vous oubliez de renouveler ce certificat), puis vous demandera d'accepter les conditions générales du service.
-Enfin, il vous répond normalement que le certificat a été généré dans `/etc/letsencrypt/live/alternc.monserveur.com/fullchain.pem`
-
-En vrai, Letsencrypt a créé 4 fichiers dans ce dossier : ̀`cert.pem` (votre certificat), `privkey.pem` (votre clé privée), `chain.pem` (le certificat chaîné de la CA) et `fullchain.pem` (votre certificat concaténé à celui de la CA)
-
-Apache, postfix, dovecot et proftpd savent bien utiliser le coupe privkey.pem + fullchain.pem. C'est ce couple de fichiers que va utiliser AlternC.
-
-N'oubliez pas de mettre en place un script de renouvellement de ce certificat, soit via certbot (qui le fait tout seul par défaut), soit votre propre script, qui devrait aussi relancer les services si des certificats ont été mis à jour.
-
-Configurer AlternC pour SSL
----------------------------
-
-Lors du lancement de alternc.install, le script regarde si des fichiers `/etc/alternc/fullchain.pem` et `/etc/alternc/privkey.pem` sont présents. S'ils sont présents, il configure les logiciels pour utiliser ces certificats pour leur fonctionnement. 
-
-Aussi, pour utiliser le certificat généré plus haut via Letsencrypt, nous créeons un lien symbolique comme suit : 
-
-```
-ln -s /etc/letsencrypt/live/alternc.monserveur.com/fullchain.pem /etc/alternc/fullchain.pem
-
-ln -s /etc/letsencrypt/live/alternc.monserveur.com/privkey.pem /etc/alternc/privkey.pem
-```
-
-L'avantage de faire un lien symbolique est qu'en cas de renouvellement, les services reprendront automatiquement le nouveau certificat lors de leur rechargement.
-
-Si vous utilisez un autre système pour vos certificats, changez la cible du lien de manière adéquate.
-
-Une fois ces fichiers présents, relancez `alternc.install`, qui va détecter ces nouveaux fichiers et lancer la configuration du SSL/TLS pour les logiciels, qui seront ensuite redémarrés.
+## Vérification
 
 Pour vérifier que votre panel a bien HTTPS de configuré, vous pouvez vous rendre sur [SSLLabs](https://ssllabs.com) et entrer votre nom DNS de serveur, une note de *A* devrait être obtenue automatiquement.
-
-
-
