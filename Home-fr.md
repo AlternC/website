@@ -15,17 +15,17 @@ Si vous avez des questions, vous pouvez sans doute y trouver des réponses dans 
 
 ### Développements
 
-Si vous souhaitez participer au développement d'AlternC, le code source est [disponible sur GitHub](https://github.com/AlternC/AlternC) sous licence GPLv2+. 
+Si vous souhaitez participer au développement d'AlternC, le code source est [disponible sur GitHub](https://github.com/AlternC/AlternC) sous licence GPLv2+.
 
 N'hésitez pas [ouvrir des tickets](https://github.com/AlternC/AlternC/issues) si vous rencontrez un bug.
 
-### Traductions 
+### Traductions
 
 La traduction du logiciel [a lieu sur Transifex](https://www.transifex.com/octopuce/alternc/), les contributions sont bienvenues !
 
 ## Dernières versions
 
-Les dernières version d'AlternC sont : 
+Les dernières version d'AlternC sont :
 
 * [3.1.11 (pour Squeeze) / 3.2.11 (pour Wheezy) / 3.3.11 (pour Jessie) and 3.4.11 (pour Stretch) sortie le 7 novembre 2017](https://github.com/AlternC/AlternC/releases/tag/3.1.11)
 * [3.1.10 (pour Squeeze) / 3.2.10 (pour Wheezy) / 3.3.10 (pour Jessie) sortie le 18 janvier 2016](https://github.com/AlternC/AlternC/releases/tag/3.1.10)
@@ -35,6 +35,7 @@ Les dernières version d'AlternC sont :
 ## Dernières versions (Nightly ou instables)
 
 Nous proposons des versions en cours de développements dans des dépôts dédiés :
+
 * Stretch (dépot en cours de déploiement, à compiler )
 * Jessie - [stable 3.3](http://stable-3-3.nightly.alternc.org/)
 * Wheezy - [stable 3.2](http://stable-3-2.nightly.alternc.org/)
