@@ -31,3 +31,11 @@ Les dernières version d'AlternC sont :
 * [3.1.10 (pour Squeeze) / 3.2.10 (pour Wheezy) / 3.3.10 (pour Jessie) sortie le 18 janvier 2016](https://github.com/AlternC/AlternC/releases/tag/3.1.10)
 * [3.1.9 (pour Squeeze) / 3.2.9 (pour Wheezy) sortie le 17 novembre 2015](https://github.com/AlternC/AlternC/releases/tag/3.1.9)
 * [3.1.8 (pour Squeeze) / 3.2.8 (pour Wheezy) sortie le 3 août 2015](https://github.com/AlternC/AlternC/releases/tag/3.1.8)
+
+## Dernières versions (Nightly ou instables)
+
+Nous proposons des versions en cours de développements dans des dépôts dédiés :
+* Stretch (dépot en cours de déploiement, à compiler )
+* Jessie - [stable 3.3](http://stable-3-3.nightly.alternc.org/)
+* Wheezy - [stable 3.2](http://stable-3-2.nightly.alternc.org/)
+* Squeeze - [stable 3.1](http://stable-3-1.nightly.alternc.org/)
