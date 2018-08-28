@@ -7,6 +7,12 @@ Si vous le souhaitez, vous pouvez tester AlternC directement [sur notre serveur 
 
 Pour installer AlternC sur votre distribution Debian GNU/Linux, [lisez notre documentation](Install-fr).
 
+### Le Livre
+
+Chantal Bernard-Putz & Benjamin Sonntag ont écrit, [chez Framabook, en 2011, un livre sur AlternC](https://framabook.org/alternccommesivousyetiez/) Une version en ligne et mise à jour est disponible ici.
+
+[Lire ici 'AlternC comme si vous y étiez'](Book-intro-laurent-chemla-fr)
+
 ### Nous contacter
 
 Vous pouvez nous joindre sur IRC via le canal `#AlternC` sur `irc.freenode.org`

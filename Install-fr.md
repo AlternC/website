@@ -2,7 +2,7 @@
 Pré-installation
 ================
 
-AlternC est prévu pour fonctionner sur la distribution Linux Debian Squeeze, Wheezy,  Jessie en pré-release).
+AlternC est prévu pour fonctionner sur la distribution Linux Debian Wheezy, Jessie, Stretch en pré-release).
 
 Pour installer Alternc vous devez : 
 
@@ -91,7 +91,7 @@ Pour installer AlternC sur un serveur vous devez utiliser un éditeur de texte p
 deb http://debian.alternc.org/ jessie main
 ```
 
-Bien entendu, remplacez "jessie" par la version de Debian que vous utilisez (Squeeze, Wheezy, Jessie, Stretch disponibles à ce jour)
+Bien entendu, remplacez "jessie" par la version de Debian que vous utilisez (Wheezy, Jessie, Stretch disponibles à ce jour)
 
 dans le fichier `/etc/apt/sources.list.d/alternc.list`.
 
