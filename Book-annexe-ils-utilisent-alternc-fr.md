@@ -2,7 +2,7 @@
 **AlternC comme si vous y étiez, le livre :**
 
 * [Introduction par Laurent Chemla, Chantal Bernard-Putz & Benjamin Sonntag](Book-intro-laurent-chemla-fr)
-* [Chapitre 3-4, Un peu d'histoire](Book-chapitre-3-histoire)
+* [Chapitre 3-4, Un peu d'histoire](Book-chapitre-3-histoire-fr)
 * [Chapitre 5, guide utilisateur](Book-chapitre-5-guide-utilisateur-fr)
 * [Chapitre 6, guide administrateur](Book-chapitre-6-guide-administrateur-fr)
 * [Chapitre 7-8, guide avancé, trucs & astuces](Book-chapitre-7-guide-avance-fr)
