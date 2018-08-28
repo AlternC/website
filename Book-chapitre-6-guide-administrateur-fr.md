@@ -1,5 +1,6 @@
 
-AlternC comme si vous y étiez, le livre :
+**AlternC comme si vous y étiez, le livre :**
+
 * [Introduction par Laurent Chemla, Chantal Bernard-Putz & Benjamin Sonntag](Book-intro-laurent-chemla-fr)
 * [Chapitre 3-4, Un peu d'histoire](Book-chapitre-3-histoire)
 * [Chapitre 5, guide utilisateur](Book-chapitre-5-guide-utilisateur-fr)
