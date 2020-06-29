@@ -54,7 +54,7 @@ Remontage de la partition
 Une fois ces modifications effectués, il suffit de remonter la partition concerné -en supposant toujours que c'est la partion `/` qui contiendra les données utilisateurs avec :
 
 ```
-mount -o remount,acl,grpquota /
+mount -o remount,acl,usrquota,grpquota /
 quotacheck -ugm /
 quotaon -v /
 ```
