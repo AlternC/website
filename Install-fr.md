@@ -43,7 +43,7 @@ apt-get install quota
 Et encore une fois modifier le `/etc/fstab` pour indiquer leur activation :
 
 ```
-/dev/md1 /               ext3    acl,grpquota,errors=remount-ro 0       1
+/dev/md1 /               ext3    acl,usrquota,grpquota,errors=remount-ro 0       1
 ```
 
 Notez que certains systèmes de virtualisation ou de containerisation n'autorisent pas la modification ou l'utilisation du fichier fstab, ou requièrent de le changer sur le système hôte. Demandez à votre hébergeur dans ce cas.
@@ -55,6 +55,8 @@ Une fois ces modifications effectués, il suffit de remonter la partition concer
 
 ```
 mount -o remount,acl,grpquota /
+quotacheck -ugm /
+quotaon -v /
 ```
 
 
