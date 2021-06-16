@@ -9,7 +9,7 @@ To [install AlternC on your Debian GNU/Linux stable distribution, see our docume
 
 ### Contact us
 
-You can join us on IRC channel `#AlternC` on `irc.freenode.org`
+You can join us on IRC channel `#AlternC` on `irc.libera.chat`
 
 ### Developments
 
