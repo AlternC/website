@@ -15,7 +15,7 @@ Chantal Bernard-Putz & Benjamin Sonntag ont écrit, [chez Framabook, en 2011, un
 
 ### Nous contacter
 
-Vous pouvez nous joindre sur IRC via le canal `#AlternC` sur `irc.freenode.org`
+Vous pouvez nous joindre sur IRC via le canal `#AlternC` sur `irc.libera.chat`
 
 Si vous avez des questions, vous pouvez sans doute y trouver des réponses dans [notre FAQ](FAQ-fr)
 
