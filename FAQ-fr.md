@@ -1,6 +1,6 @@
 # FAQ d'AlternC.
 
-N'hésitez pas à nous contacter via IRC sur le canal `#alternc` (`irc.freenode.org`).
+N'hésitez pas à nous contacter via IRC sur le canal [#alternc](https://web.libera.chat/#alternc) (`irc.libera.chat`).
 
 ## Dans quelles langues AlternC est il disponible ?
 
