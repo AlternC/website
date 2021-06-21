@@ -1,6 +1,6 @@
 # AlternC's FAQ.
 
-Feel free to contact us on IRC on the channel `#alternc` (on `irc.libera.chat`).
+Feel free to contact us on IRC on the channel [#alternc](https://web.libera.chat/#alternc) (`irc.libera.chat`)
 
 #### In which languages is AlternC available?
 
