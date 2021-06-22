@@ -1446,7 +1446,7 @@ serveur DNS secondaire automatique.
 
 L'équipe d'AlternC fournit gracieusement un service de DNS secondaire
 pour ces utilisateurs : pour cela, envoyez un simple email à
-equipe@alternc.org ou contactez-nous sur l'irc \#alternc sur freenode,
+equipe@alternc.org ou contactez-nous sur l'irc \#alternc sur irc.libera.chat,
 et envoyez-nous les informations suivantes :
 
 \- le nom dns de votre serveur AlternC
