@@ -3,7 +3,8 @@ A travis account could build nightly, to use this feature :-1:
 * Retrieve 077CC9F2.gpg from any admin
 * Verify .gitignore and exclude gpg file
 * Create empty travis file ```touch .travis.yml```
-** language : bash
+```
+language : bash
 env:
     global:
       - HUB_PROTOCOL=https
