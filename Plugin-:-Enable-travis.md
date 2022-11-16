@@ -1,4 +1,4 @@
-A travis account could build nightly, to use this feature :-1: 
+A travis account could build nightly, to use this feature : 
 
 * Retrieve 077CC9F2.gpg from any admin
 * Verify .gitignore and exclude gpg file
@@ -54,6 +54,40 @@ before_deploy:
         git push --delete -f gh nightly || true &&
         git push -f gh nightly || true
       fi
+```
+* Update debian/rules file : 
+```
+#!/usr/bin/make -f
+# Sample debian/rules that uses debhelper.
+# This file is public domain software, originally written by Joey Hess.
+#
+# This version is for a multibinary package. It also allows you to build any
+# of the binary packages independantly, via binary-<package> targets.
+
+# Uncomment this to turn on verbose mode.
+export DH_VERBOSE=1
+
+#Define version packaging
+#Exclude nighly version
+VERSION=$(shell git tag -l --points-at HEAD |grep -v 'nightly')
+ifeq ($(strip $(VERSION)),)
+	VERSION=$(shell git tag | sort -V |grep -v nightly|tail -1)
+	ifeq ($(strip $(VERSION)),)
+		export VERSION="0.0.0"
+	endif
+	VERSION:=$(VERSION)+$(shell date +'%y%m%d%H%M%S')
+	IS_NIGHTLY=1
+endif
+
+clean:
+	dh clean
+	rm -f debian/files
+	(git rev-parse --git-dir > /dev/null 2>&1 && git checkout debian/changelog) || true
+ifeq ($(strip $(IS_NIGHTLY)),1)
+	(git rev-parse --git-dir > /dev/null 2>&1 && dch -m -b -v $(VERSION) autobuild) || true
+endif
+%:
+	dh $@
 ```
 * Login to travis as AlterncBot ```travis login --github-token ghp_... --pro```
 * Encrypt file ```travis encrypt-file 077CC9F2.gpg --add --pro```
