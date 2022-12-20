@@ -35,8 +35,8 @@ We can find hook available on each class with **invoke** method.
 
 ## DNS actions
 
-* hook_updatedomains_dns_pre($domain)
-* hook_updatedomains_dns_del() or hook_updatedomains_dns_del() 
+* hook_updatedomains_dns_pre()
+* hook_updatedomains_dns_del($domain) or hook_updatedomains_dns_del($domain) 
 * hook_updatedomains_dns_post
 
 ## Web actions
