@@ -32,3 +32,17 @@ dns_reload
 
 Some classes provide hook to allow plugin to interact with them.
 We can find hook available on each class with **invoke** method.
+
+## DNS actions
+
+* hook_updatedomains_dns_pre($domain)
+* hook_updatedomains_dns_del() or hook_updatedomains_dns_del() 
+* hook_updatedomains_dns_post
+
+## Web actions
+
+* hook_updatedomains_web_pre()
+* hook_updatedomains_web_before($subdomain)
+* hook_updatedomains_web_del($subdomain) or hook_updatedomains_web_add($subdomain)
+* hook_updatedomains_web_after($subdomain)
+* hook_updatedomains_web_post()
