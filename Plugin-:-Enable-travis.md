@@ -1,7 +1,15 @@
 A travis account could build nightly, to use this feature : 
 
-* Retrieve 6D5E5753F12109663BABEED53087CD3324A99FBC.gpg from any AlternC admin (gpg key decicated to AlternCBot account)
+* Retrieve 6D5E5753F12109663BABEED53087CD3324A99FBC.gpg from any AlternC administrator (gpg key decicated to AlternCBot account)
+* Retrieve GITHUB_TOKEN from any AlternC administrator or from Vault (in travis bot Notes)
 * Verify .gitignore and exclude gpg file
+* Login to travis as AlterncBot ```travis login --github-token ghp_... --pro```
+* Encrypt gpg file : ```travis encrypt-file 6D5E5753F12109663BABEED53087CD3324A99FBC.gpg --pro```
+* Encrypt GITHUB_TOKEN_ENV : ```travis encrypt GITHUB_TOKEN=ghp_...```
+* Encrypt GITHUB_TOKEN_VALUE : ```travis encrypt ghp_...```
+
+Previous 3 encrypt values must be stored in temporary content. As we have a specific travis template, we can't directly import them in our config.
+
 * Create empty travis file ```touch .travis.yml```
 ```
 language : bash
@@ -9,7 +17,7 @@ env:
     global:
       - HUB_PROTOCOL=https
       #GITHUB_TOKEN
-      - secure: "[GITHUB_TOKEN=GITHUB_TOKEN env]"
+      - secure: "[GITHUB_TOKEN_ENV]"
 branches:
   except:
   - nightly
@@ -30,7 +38,7 @@ deploy:
       file_glob: true
       file: "../*.deb"
       api_key:
-          secure: "[GITHUB_TOKEN]"
+          secure: "[GITHUB_TOKEN_VALUE]"
       on:
           tags: true
     - provider: releases
@@ -42,7 +50,7 @@ deploy:
       name: Automatic nightly build by Travis on $(date +'%F %T %Z').
       target_commitish: $TRAVIS_COMMIT
       api_key:
-          secure: "[GITHUB_TOKEN]"
+          secure: "[GITHUB_TOKEN_VALUE]"
       on:
           branch: master
 before_deploy:
@@ -61,7 +69,7 @@ env:
     global:
       - HUB_PROTOCOL=https
       #GITHUB_TOKEN
-      - secure: "[GITHUB_TOKEN env]"
+      - secure: "[GITHUB_TOKEN_ENV]"
 branches:
   except:
   - nightly
@@ -82,7 +90,7 @@ deploy:
       file_glob: true
       file: "../*.deb"
       api_key:
-          secure: "[GITHUB_TOKEN value]"
+          secure: "[GITHUB_TOKEN_VALUE]"
       on:
           tags: true
     - provider: releases
@@ -94,7 +102,7 @@ deploy:
       name: Automatic nightly build by Travis on $(date +'%F %T %Z').
       target_commitish: $TRAVIS_COMMIT
       api_key:
-          secure: "[GITHUB_TOKEN value]"
+          secure: "[GITHUB_TOKEN_VALUE]"
       on:
           branch: master
 before_deploy:
@@ -141,8 +149,5 @@ endif
 %:
 	dh $@
 ```
-* Login to travis as AlterncBot ```travis login --github-token ghp_... --pro```
-* Encrypt file ```travis encrypt-file 6D5E5753F12109663BABEED53087CD3324A99FBC.gpg --pro```
-* Encrypt GITHUB_TOKEN env ```travis encrypt GITHUB_TOKEN=ghp_...```
-* Encrypt GITHUB_TOKEN value ```travis encrypt ghp_...```
+
 
