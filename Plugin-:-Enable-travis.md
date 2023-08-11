@@ -55,7 +55,7 @@ deploy:
           branch: master
 before_deploy:
     - >
-      if [[ $TRAVIS_BRANCH == "master" ]]; then
+      if [[ $TRAVIS_BRANCH == "master" || $TRAVIS_BRANCH == "main" ]]; then
         gh release delete nightly -R ${TRAVIS_REPO_SLUG} -y
         git tag -f nightly || true &&
         git remote add gh https://${GITHUB_TOKEN}@github.com/${TRAVIS_REPO_SLUG}.git &&
