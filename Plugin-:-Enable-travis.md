@@ -3,8 +3,8 @@ A travis account could build nightly, to use this feature :
 * Retrieve 6D5E5753F12109663BABEED53087CD3324A99FBC.gpg from any AlternC administrator (gpg key decicated to AlternCBot account)
 * Retrieve GITHUB_TOKEN from any AlternC administrator or from Vault (in travis bot Notes)
 * Verify .gitignore and exclude gpg file
-* Login to travis as AlterncBot ```travis login --github-token ghp_... --pro```
-* Encrypt gpg file : ```travis encrypt-file 6D5E5753F12109663BABEED53087CD3324A99FBC.gpg --pro```
+* Login to travis as AlterncBot ```travis login --pro --github-token ghp_...```
+* Encrypt gpg file : ```travis encrypt-file --pro 6D5E5753F12109663BABEED53087CD3324A99FBC.gpg```
 * Encrypt GITHUB_TOKEN_ENV : ```travis encrypt GITHUB_TOKEN=ghp_...```
 * Encrypt GITHUB_TOKEN_VALUE : ```travis encrypt ghp_...```
 
