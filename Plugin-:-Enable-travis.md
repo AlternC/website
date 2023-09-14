@@ -28,7 +28,7 @@ before_install:
     - echo "deb [arch=$(dpkg --print-architecture) signed-by=/usr/share/keyrings/githubcli-archive-keyring.gpg] https://cli.github.com/packages stable main" | sudo tee /etc/apt/sources.list.d/github-cli.list > /dev/null
     - sudo apt-get -qq update
     - sudo apt-get install -y debhelper devscripts fakeroot build-essential po-debconf gh
-    - openssl aes-256-cbc -K $encrypted_fc16b55399d6_key -iv $encrypted_fc16b55399d6_iv -in 6D5E5753F12109663BABEED53087CD3324A99FBC.gpg.enc -out ../gpg-debuild/6D5E5753F12109663BABEED53087CD3324A99FBC.gpg -d
+    - openssl aes-256-cbc -K $encrypted_fc16b55399d6_key -iv $encrypted_fc16b55399d6_iv -in 6D5E5753F12109663BABEED53087CD3324A99FBC.gpg.enc -out 6D5E5753F12109663BABEED53087CD3324A99FBC.gpg -d
     - gpg --import 6D5E5753F12109663BABEED53087CD3324A99FBC.gpg
 install:
     - debuild '-k3087CD3324A99FBC'
