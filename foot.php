@@ -9,7 +9,7 @@
             <a class="back-to-top" href="#top">
               Back to top
             </a>
-    <?php foreach($otherlang as $l=>$name) { ?>
+    <?php foreach ($otherlang as $l => $name) { ?>
 <a class="back-to-top" href="<?php echo $uri."-".$l; ?>">
    <?php echo $name; ?>
             </a>
@@ -33,41 +33,41 @@
     <li class="follow-btn">
       <a href="http://demo.alternc.org" class="twitter-follow-button"><?php
 switch ($lang) {
-case "fr":
- echo "Serveur de Démonstration";
-break;
-case "en":
-default:
- echo "Demonstration Server";
-break;
+    case "fr":
+        echo "Serveur de Démonstration";
+        break;
+    case "en":
+    default:
+        echo "Demonstration Server";
+        break;
 }
-?></a>
+           ?></a>
     </li>
     <li class="follow-btn">
       <a href="https://twitter.com/AlternC_en" class="twitter-follow-button"><?php
 switch ($lang) {
-case "fr":
- echo "@AlternC_en sur Twitter";
-break;
-case "en":
-default:
- echo "@AlternC_en on Twitter";
-break;
+    case "fr":
+        echo "@AlternC_en sur Twitter";
+        break;
+    case "en":
+    default:
+        echo "@AlternC_en on Twitter";
+        break;
 }
-?></a>
+           ?></a>
     </li>
     <li class="follow-btn">
     <a href="https://github.com/alternc/" class="twitter-follow-button"><?php
 switch ($lang) {
-case "fr":
- echo "Code source sur Github";
-break;
-case "en":
-default:
- echo "Source code on Github";
-break;
+    case "fr":
+        echo "Code source sur Github";
+        break;
+    case "en":
+    default:
+        echo "Source code on Github";
+        break;
 }
-?></a>
+           ?></a>
     </li>
   </ul>
 </div>

@@ -1,3 +1,3 @@
 <?php
 
-$path="/var/www/www"; // root of WIKI clone
+$path = "/var/www/www"; // root of WIKI clone

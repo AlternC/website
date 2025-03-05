@@ -8,7 +8,9 @@
 <meta name="description" content="AlternC, Web and Mail Hosting software control panel.">
 <meta name="keywords" content="AlternC Software Linux Debian Gnu Hosting Web Mail">
 
-      <title>AlternC<?php if (isset($title)) { echo " - ".$title; } ?></title>
+      <title>AlternC<?php if (isset($title)) {
+          echo " - ".$title;
+      } ?></title>
 
 <!-- Bootstrap core CSS -->
 
@@ -40,17 +42,19 @@
 			 <a href="/"><img src="/logo.png" alt="AlternC" /></a>
 			 </div>
         <h1><a href="/">AlternC</a></h1>
-      <p><?php 
+      <p><?php
    switch ($lang) {
-   case "fr":
-   echo "Suite logicielle de gestion de serveur web & mail";
-   break;
-   case "en":
-   default:
-   echo "Web and Mail server management software";
-   } 
+       case "fr":
+           echo "Suite logicielle de gestion de serveur web & mail";
+           break;
+       case "en":
+       default:
+           echo "Web and Mail server management software";
+   }
 ?></p>
-<?php if (isset($title)) { echo "<p>".$title."</p>"; } ?>
+<?php if (isset($title)) {
+    echo "<p>".$title."</p>";
+} ?>
       </div>
     </div>
 
