@@ -15,8 +15,7 @@ Chantal Bernard-Putz & Benjamin Sonntag ont écrit, [chez Framabook, en 2011, un
 
 ### Nous contacter
 
-Vous pouvez nous joindre sur IRC via le canal `#AlternC` sur `irc.libera.chat`
-
+Vous pouvez nous joindre sur IRC via le canal `#AlternC` sur `irc.libera.chat` ou directement en ligne [avec le client web](https://web.libera.chat/?nick=Visiteur?#alternc)
 Si vous avez des questions, vous pouvez sans doute y trouver des réponses dans [notre FAQ](FAQ-fr)
 
 ### Développements
@@ -27,17 +26,19 @@ N'hésitez pas [ouvrir des tickets](https://github.com/AlternC/AlternC/issues) s
 
 ### Traductions
 
-La traduction du logiciel [a lieu sur Transifex](https://www.transifex.com/octopuce/alternc/), les contributions sont bienvenues !
+La traduction du logiciel [a lieu sur Weblate](https://hosted.weblate.org/projects/alternc/), les contributions sont bienvenues !
 
 ## Dernières versions
 
-Les dernières versions d'AlternC sont :
+Les dernières versions d'AlternC sont disponbiles sur https://debian.alternc.org/ :
 
-* 3.5rc2 pour (Stretch/Buster) sur https://debian.alternc.org/
-* 3.3.11 pour (<Buster) sur https://debian.alternc.org/ jessie main
+* 3.5rc3 compatible avec Buster, Bullseye et Bookworm
+* 3.3.11 compatible avec Strech et Buster
+
+Les versions sont validées et testée pour Buster et Bookworm
 
 ## Dernières versions (Expérimentale ou dîtes Nightly)
 
-Nous proposons des versions en cours de développements dans des dépôts dédiés :
+Nous proposons une version expérimentale pour Buster, Bullseye et Bookworm depuis le dépot experimental :
 
-* Stretch/Buster : https://debian.alternc.org/ experimental main
+* https://debian.alternc.org/ experimental main
