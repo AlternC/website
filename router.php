@@ -1,5 +1,9 @@
 <?php
 
+require __DIR__ . '/vendor/autoload.php';
+
+use League\CommonMark\GithubFlavoredMarkdownConverter;
+
 include('config/config.php');
 
 // List here the supported languages :
@@ -69,9 +73,18 @@ if (!file_exists($path."/".$uri."-".$lang.".md")) {
 // automatic compilation / caching of HTML pages
 if (!file_exists($path."/".$uri."-".$lang.".html") ||
     filemtime($path."/".$uri."-".$lang.".html") < filemtime($path."/".$uri."-".$lang.".md") ) {
-    $exec="github-markup ".escapeshellarg($path."/".$uri."-".$lang.".md")." >".escapeshellarg($path."/".$uri."-".$lang.".html")." ";
-//    echo $exec;
-  passthru($exec);
+      $content = file_get_contents($path."/".$uri."-".$lang.".md");
+      $converter = new GithubFlavoredMarkdownConverter([
+        'html_input' => 'strip',
+        'allow_unsafe_links' => false,
+      ]);
+
+      $content_html = $converter->convert($content);
+
+      file_put_contents(
+              $path."/".$uri."-".$lang.".html",
+              $content_html
+      );
 }
 
 $f=fopen($path."/".$uri."-".$lang.".html","rb");
