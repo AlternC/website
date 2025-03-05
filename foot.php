@@ -44,14 +44,14 @@ switch ($lang) {
            ?></a>
     </li>
     <li class="follow-btn">
-      <a href="https://twitter.com/AlternC_en" class="twitter-follow-button"><?php
+      <a href="https://piaille.fr/@alternc" class="twitter-follow-button"><?php
 switch ($lang) {
     case "fr":
-        echo "@AlternC_en sur Twitter";
+        echo "@AlternC sur Mastodon";
         break;
     case "en":
     default:
-        echo "@AlternC_en on Twitter";
+        echo "@AlternC on Mastodon";
         break;
 }
            ?></a>
