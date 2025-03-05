@@ -1,6 +1,6 @@
 <?php
 
-$path="/var/www/www"; // root of WIKI clone
+include('config/config.php');
 
 // List here the supported languages :
 $otherlang=array( 
